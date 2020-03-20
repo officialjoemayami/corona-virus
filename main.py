@@ -1,5 +1,8 @@
 from source import google
+from flask import Flask
 
-google.extract()
+app = Flask(__name__)
 
-
+@app.route('/extract')
+def extract():
+    return google.extract()
