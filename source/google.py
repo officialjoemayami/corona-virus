@@ -4,6 +4,7 @@ import json
 
 sources = req.get('https://news.google.com/rss/search?q=%7Bcoronavirus%7D&hl=en-NG&gl=NG&ceid=NG:en')
 jsonFile = []
+
 def extract():
     soup = bs(sources.text, features='lxml')
     items = soup.find_all('item')
@@ -12,7 +13,7 @@ def extract():
         article_link = item.link.next_sibling
         publish_date = item.pubdate.string
         description = get_desc(item.description)
-        source = item.source.next_sibling
+        source = item.source.string
         source_link = get_link(item)
 
         jsonFile.append({
@@ -35,5 +36,5 @@ def get_desc(item):
 def get_link(item):
     return (item.source.get('url'))
 
-
+extract()
 
