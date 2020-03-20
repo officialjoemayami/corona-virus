@@ -8,4 +8,4 @@ def extract():
     if (request.method == 'GET'):
         return jsonify(google.extract())
     else:
-        request jsonify({'message': 'Wrong request method'})
+        return jsonify({'message': 'Wrong request method'})
