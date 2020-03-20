@@ -5,11 +5,17 @@ if you are having issue and need support pertaining this project [join our commu
  
  # How To Setup Environment
  This information is for developers only contributing to this source code.
+ 
  Use Virtual Environment for this project.
+ 
  To use Virtual Environment, use: `pip install virtualenv` to install virtual environment.
+ 
  After installing virtualenv, you need to setup the environment. You can pull this repo and setup virutalenv in the root directory of this project.
+ 
  To do so use `virtualenv myenv` myenv is the folder name that contain your virtual environment.
+ 
  To activate virtualenv, use `myenv/Scripts/activate` 
+ 
  To get all libaries used for this project use `pip install -r requirements.txt`
  
  # How To Use API
